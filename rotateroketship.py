@@ -46,25 +46,25 @@ while done==False:
 			done=True #flag that we are done so we exit this loop
             #user pressed down on a key
 
-			if event.type==pygame.KEYDOWN:
+		if event.type==pygame.KEYDOWN:
             #figure out if it was an arrow key. If so
             #adjust speed
-				if event.key==pygame.K_LEFT:
-					angle=angle-3
-				if event.key==pygame.K_RIGHT:
-					angle=angle+3
-				if event.key==pygame.K_UP:
-					y_speed=-1*sp
-				if event.key==pygame.K_DOWN:
-					y_speed=sp
+			if event.key==pygame.K_LEFT:
+				angle=angle-3
+			if event.key==pygame.K_RIGHT:
+				angle=angle+3
+			if event.key==pygame.K_UP:
+				y_speed=-1*sp
+			if event.key==pygame.K_DOWN:
+				y_speed=sp
 
         #user let up on a key
 		if event.type==pygame.KEYUP:
-            #if it is an arriw key, reset vector back to zero
+            	#if it is an arriw key, reset vector back to zero
 			if event.key==pygame.K_LEFT:
-				angle = angle - 3.0
+				angle = 0
 			if event.key==pygame.K_RIGHT:
-				angle = angle + 3.0
+				angle = 0
 			if event.key==pygame.K_UP:
 				y_speed=0
 			if event.key==pygame.K_DOWN:
